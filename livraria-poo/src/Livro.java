@@ -13,10 +13,7 @@ public class Livro {
         System.out.println("\nValor com Desconto: " + valorComDesconto);
         System.out.println("\nDescrição: " + descricao);
         System.out.println("\nISBN: " + isbn);
-        System.out.println("\nAutor: " + autor.nome);
-        System.out.println("\nNome Artístico: " + autor.nomeArtistico);
-        System.out.println("\nAutor email: " + autor.email);
-        System.out.println("\nAutor CPF: " + autor.cpf);
+        System.out.println("\nAutor: " + autor.nomeArtistico);
         System.out.println("\n----------------------------------------");
     }
 
