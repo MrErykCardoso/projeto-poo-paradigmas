@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import javax.swing.JOptionPane;
 
 public class CadastroLivro {
     public static void main (String[] args) {
@@ -12,16 +11,21 @@ public class CadastroLivro {
         jonasSilverHeat.email = "encantadorDeGatinhas@email.com";
         jonasSilverHeat.cpf = "000.000.000-00";
 
-        Livro livro = new Livro();
+        Livro livro = new Livro(1.0);
 
         System.out.println("Insira o nome do Livro: ");
-        String nome = s.nextLine();
+        livro.setNome(s.nextLine());
+        
         System.out.println("Insira o valor do livro: ");
-        double valor = s.nextDouble();
+        livro.setValor(s.nextDouble());
         s.nextLine();
+
         System.out.println("Insira a descrição do Livro: ");
-        String descricao = s.nextLine();
-        livro.isbn = "000-000-000";
+        livro.setDescricao(s.nextLine());
+        
+        System.out.println("Insira o código ISBN do livro: ");
+        livro.setIsbn(s.nextLine());
+        
         livro.autor = jonasSilverHeat;
 
         livro.aplicarDesconto(50);

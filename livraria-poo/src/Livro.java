@@ -1,10 +1,43 @@
 public class Livro {
-    String nome;
-    double valor;
-    double valorComDesconto;
-    String descricao;
-    String isbn;
-    Autor autor;
+    private String nome;
+    private double valor;
+    public double valorComDesconto;
+    private String descricao;
+    private String isbn;
+    public Autor autor;
+
+    public String getNome() {
+        return nome;
+    }
+    public double getValor() {
+        return valor;
+    }
+    public double getValorComDesconto() {
+        return valorComDesconto;
+    }
+    public String getDescricao() {
+        return descricao;
+    }
+    public String getIsbn() {
+        return isbn;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public Livro(double valorMin){
+        System.out.println("Livro Criado <3");
+        this.valor = valorMin;
+    }
 
     void imprimeAtributo(){
         System.out.println("\n\nInformações do livro: -------------------");
@@ -22,5 +55,5 @@ public class Livro {
         System.out.println("\n\nDesconto Aplicado!---------------");
         System.out.println("\nNovo valor: " + valorComDesconto);
         System.out.println("\n---------------------------------");
-    }
+    }   
 }
