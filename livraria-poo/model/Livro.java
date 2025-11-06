@@ -34,9 +34,8 @@ public class Livro {
         this.isbn = isbn;
     }
 
-    public Livro(double valorMin){
+    public Livro(){
         System.out.println("Livro Criado <3");
-        this.valor = valorMin;
     }
 
     void imprimeAtributo(){
