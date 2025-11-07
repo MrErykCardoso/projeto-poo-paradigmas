@@ -1,5 +1,5 @@
+package model;
 import java.util.Scanner;
-
 
 public class Produto {
     Scanner s = new Scanner(System.in);
