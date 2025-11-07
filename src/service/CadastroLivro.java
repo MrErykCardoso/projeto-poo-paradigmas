@@ -1,4 +1,6 @@
 package service;
+
+import model.Livro;
 import java.util.Scanner;
 
 public class CadastroLivro {

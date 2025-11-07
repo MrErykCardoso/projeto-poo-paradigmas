@@ -1,4 +1,6 @@
 package service;
+
+import model.Produto;
 import java.util.Scanner;
 
 public class CadastroProduto {

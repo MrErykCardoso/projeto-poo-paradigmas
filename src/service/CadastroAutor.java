@@ -1,4 +1,6 @@
 package service;
+
+import model.Autor;
 import java.util.Scanner;
 
 public class CadastroAutor {
