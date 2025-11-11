@@ -31,8 +31,7 @@ public class Autor {
         return this.cpf = cpf;
     }
 
-    public Autor(){
-    }
+    public Autor(){}
 
     void imprimeAutor(){
         System.out.println("\n\n Dados do autor: ---------------");
