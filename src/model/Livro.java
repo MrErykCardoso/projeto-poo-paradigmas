@@ -35,12 +35,20 @@ public class Livro {
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
-
     public Livro(){
         System.out.println("Livro Criado <3");
     }
 
-    void imprimeAtributo(){
+    public Livro(String nome, double valor, String descricao, String isbn){
+        this.nome = nome;
+        this.valor = valor;
+        this.valorComDesconto = valor;
+        this.descricao = descricao;
+        this.isbn = isbn;
+        this.autor = null;
+    }
+
+    public void imprimeAtributo(){
         System.out.println("\n\nInformações do livro: -------------------");
         System.out.println("\nNome: " + nome);
         System.out.println("\nValor: " + valor + " R$");
@@ -51,11 +59,11 @@ public class Livro {
         System.out.println("\n----------------------------------------");
     }
 
-    void aplicarDesconto(double porcentagem){
+    public void aplicarDesconto(double porcentagem){
         double desconto = porcentagem/100;
 
-        if(desconto >= 0.3){
-            this.valorComDesconto = valor - (valor*desconto);
+        if(desconto <= 0.3){
+            this.valorComDesconto = this.valor - (this.valor*desconto);
             System.out.println("\n\nDesconto Aplicado!---------------");
             System.out.println("\nNovo valor: " + valorComDesconto);
             System.out.println("\n---------------------------------");

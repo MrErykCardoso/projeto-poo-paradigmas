@@ -1,45 +1,22 @@
 package model;
 
 public class Ebook extends Livro{
-    public String getNome() {
-        return nome;
-    }
-    public double getValor() {
-        return valor;
-    }
-    public double getValorComDesconto() {
-        return valorComDesconto;
-    }
-    public String getDescricao() {
-        return descricao;
-    }
-    public String getIsbn() {
-        return isbn;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;//???????
-    }
-    public void setValor(double valor) {
-        this.valor = valor;//???????
-    }
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;//???????
-    }
-    public void setIsbn(String isbn) {
-        this.setIsbn(isbn) = isbn;//???????
-    }
-
-    public Ebook(){
+    public Ebook() {
+        super();
         System.out.println("Ebook Criado <3");
+    }
+    public Ebook(String nome, double valor, String descricao, String isbn) {
+        super(nome, valor, descricao, isbn);
+        this.valorComDesconto = valor;
+        this.autor = null;
     }
 
     @Override
-    void aplicarDesconto(double porcentagem){
+    public void aplicarDesconto(double porcentagem){
         double desconto = porcentagem/100;
-        double valor = Ebook.getValor();//???????
 
-        if(desconto >= 0.4){
-            this.valorComDesconto = getvalor()*desconto;
+        if(desconto <= 0.4){
+            this.valorComDesconto = this.getValor() - (this.getValor()*desconto);
         }else{
             System.out.println("O desconto não pode ser maior que 40% para Ebook.");
             return;

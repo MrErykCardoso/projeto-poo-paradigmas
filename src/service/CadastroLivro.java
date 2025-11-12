@@ -65,6 +65,9 @@ public class CadastroLivro {
                 throw new InvalidValue("O ISBN não pode estar vazio e nem ser nulo.");
             }
         }
+
+        //TODO: implementar atribuição de autor com lista de autores cadastrados
+        livro.autor = null;
     }
     
     
