@@ -6,9 +6,9 @@ import exceptions.*;
 import java.util.Scanner;
 
 public class CadastroAutor {
-    static Scanner s = new Scanner(System.in);
+    Scanner s = new Scanner(System.in);
 
-    public static Autor cadastro() throws Exception {
+    public Autor cadastro() throws Exception {
         String nome = null, nomeArt = null, email = null, cpf = null;
         Autor autor = new Autor();
 

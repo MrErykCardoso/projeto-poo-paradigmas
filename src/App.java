@@ -10,7 +10,6 @@ public class App {
         
         switch(option){
             case 1:
-                Autor autor = CadastroAutor.cadastro();
                 
         }
     }

@@ -3,7 +3,7 @@ package model;
 public class Livro {
     private String nome;
     private double valor;
-    public double valorComDesconto;
+    protected double valorComDesconto;
     private String descricao;
     private String isbn;
     public Autor autor;
@@ -52,9 +52,16 @@ public class Livro {
     }
 
     void aplicarDesconto(double porcentagem){
-        valorComDesconto = valor - (valor*(porcentagem/100));
-        System.out.println("\n\nDesconto Aplicado!---------------");
-        System.out.println("\nNovo valor: " + valorComDesconto);
-        System.out.println("\n---------------------------------");
+        double desconto = porcentagem/100;
+
+        if(desconto >= 0.3){
+            this.valorComDesconto = valor - (valor*desconto);
+            System.out.println("\n\nDesconto Aplicado!---------------");
+            System.out.println("\nNovo valor: " + valorComDesconto);
+            System.out.println("\n---------------------------------");
+        }else{
+            System.out.println("O desconto não pode ser maior que 30% para Livro.");
+            return;
+        }
     }   
 }
