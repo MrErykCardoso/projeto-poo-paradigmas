@@ -8,9 +8,9 @@ public class App {
         System.out.println("\n\n---- Bliblioteca Virtual ----");
         System.out.println("\nSelecione o que gostaria de fazer:");
         
+        //TODO: menu de interação com o usuário
         switch(option){
-            case 1:
-                
+            case 1: 
         }
     }
 }
